@@ -20,6 +20,7 @@ export default class HomeScreen extends React.Component {
           </View>
           <TouchableHighlight
             style={styles.brandButton}
+            underlayColor='#C6392F'
             onPress={() => this.props.navigation.navigate('Details')}>
             <Text style={styles.brandButtonText}>Get Started</Text>
           </TouchableHighlight>
@@ -53,7 +54,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     paddingHorizontal: 24,
-    paddingVertical: 48
+    paddingVertical: 48,
+    paddingTop: 54
   },
   title: {
     fontSize: 24,

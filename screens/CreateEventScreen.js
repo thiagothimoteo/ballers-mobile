@@ -1,12 +1,28 @@
 import React from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, Text, Button, ScrollView } from 'react-native';
+import { TextField } from 'react-native-material-textfield';
 
 export default class CreateEventScreen extends React.Component {
+  static navigationOptions = {
+    title: 'Create Event',
+    headerRight: () => (
+      <Button
+        title="OK"
+        onPress={ () => {}}
+      />
+    )
+  }
+
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Create event form should be here</Text>
-      </View>
+      <ScrollView>
+        <View style={styles.container}>
+          <TextField label="Event" value="" />
+          <TextField label="Place" value="" />
+          <TextField label="Description" value="" multiline />
+        </View>
+
+      </ScrollView>
     );
   }
 }
@@ -15,7 +31,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: 'stretch',
+    padding: 24
   },
 });
